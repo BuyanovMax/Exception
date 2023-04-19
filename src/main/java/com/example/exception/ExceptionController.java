@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.regex.PatternSyntaxException;
+
+
 @RestController
 public class ExceptionController {
     private static ExceptionService exceptionService;
@@ -23,6 +26,7 @@ public class ExceptionController {
         } catch (WrongPasswordException e) {
             return false;
         }
+
 
     }
 
